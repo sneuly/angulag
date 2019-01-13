@@ -2,3 +2,12 @@ span {
     cursor: pointer;
     font-size: 3em;
 }
+ul {
+    margin-left: 10px;
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+li {    
+    margin-right: 5px;
+}

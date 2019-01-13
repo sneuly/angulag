@@ -1,19 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-favorite',
-  templateUrl: './favorite.component.html',
-  styleUrls: ['./favorite.component.scss']
+  selector: "app-favorite",
+  templateUrl: "./favorite.component.html",
+  styleUrls: ["./favorite.component.scss"]
 })
 export class FavoriteComponent implements OnInit {
   isFavorite: boolean;
-  
-  constructor() { }
+  rating: number = 0;
+  stars = [1, 2, 3, 4, 5];
 
-  ngOnInit() {
+  constructor() {}
+
+  ngOnInit() {}
+
+  onStarClicked(rating: number) {
+    this.rating = rating;
   }
 
-  onStarClicked(){
-    this.isFavorite = !this.isFavorite;
+  isRated(starOrder: number) {
+    return this.rating >= starOrder;
   }
 }

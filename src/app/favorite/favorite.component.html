@@ -1,4 +1,10 @@
-<span class="fa" 
-[class.fa-star]="isFavorite"
-[class.fa-star-o]="!isFavorite"
-(click)="onStarClicked()"></span>
+<ul>
+  <li *ngFor="let star of stars">
+    <span
+      class="fa"
+      [class.fa-star]="isRated(star)"
+      [class.fa-star-o]="!isRated(star)"
+      (click)="onStarClicked(star)"
+    ></span>
+  </li>
+</ul>
