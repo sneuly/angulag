@@ -5,6 +5,8 @@
       [class.fa-star]="isRated(star)"
       [class.fa-star-o]="!isRated(star)"
       (click)="onStarClicked(star)"
+      (mouseenter)="onStarMouseEnter(star)"
+      (mouseleave)="onStarMouseLeave()"
     ></span>
   </li>
 </ul>
